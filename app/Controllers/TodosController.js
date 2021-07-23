@@ -37,7 +37,8 @@ export default class todosController{
         }
     }
     
-    checked(bool, id){
-    listsService.checked(bool, id)}
+    checked(id){
+    todosService.checked(id)
+    }
 }
 

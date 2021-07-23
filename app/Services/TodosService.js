@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js"
-import  Todo  from "../Models/Todo.js"
+import  Todo   from "../Models/Todo.js"
 import { sandbox } from './AxiosService.js'
 
 class TodosService{
@@ -17,10 +17,11 @@ class TodosService{
         ProxyState.todos = res.data.map(t => new Todo(t))
     }
 
-    checked(bool, id){
-        ProxyState.todos.find(i => i.id === id).checked = bool
-        // saveState()
-        ProxyState.todos = ProxyState.todos
+    async checked(id){
+        let found = ProxyState.todos.find(i => i.id === id)
+        found.completed = !found.completed
+        await sandbox.put(`veronica/todos/${id}`, found)
+        this.getAllTodos()
     }
 }
 
