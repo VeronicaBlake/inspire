@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <title>inspire</title>
@@ -21,7 +21,19 @@
             <div class = "col-12" id="clock">clock</div>
             <div class = "col-12" id="image">image</div>
             <div class = "col-12" id="quote">quote</div>
-            <div class = "col-12" id="todo">todo</div>
+            <div class="col-3 mx-5 p-5">
+                <div class="card m-3">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">To Do:</h5>
+                    </div>
+                    <div class="card-body" id="todo"></div>
+                    <form class="form d-flex p-2" onsubmit="app.todosController.createTodo(event)">
+                        <input type="text" name = "description" class="form-control" placeholder="Add Task..."
+                            required minlength="3" maxlength="50">
+                        <button type="submit" class="btn btn-success" title='add Task'><i class="fas fa-plus"></i></button>
+                    </form>
+                </div>
+            </div>
             <div class = "col-12" id="weather">weather</div>
         </div>
     </main>
@@ -30,7 +42,9 @@
             <p><small>Made with love by Codeworks</small></p>
         </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 
