@@ -40,5 +40,9 @@ export default class todosController{
     checked(id){
     todosService.checked(id)
     }
+
+    removeTask(id){
+        todosService.removeTask(id)
+    }
 }
 

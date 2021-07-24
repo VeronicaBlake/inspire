@@ -23,6 +23,13 @@ class TodosService{
         await sandbox.put(`veronica/todos/${id}`, found)
         this.getAllTodos()
     }
+
+    async removeTask(id){
+        // if(window.confirm('Delete this task?'))
+        let toDelete = ProxyState.todos.filter(t => t.id !=id)
+        await sandbox.delete(`veronica/todos/${id}`, toDelete)
+        this.getAllTodos()
+    }
 }
 
 export const todosService = new TodosService()
