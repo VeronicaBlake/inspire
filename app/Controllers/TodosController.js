@@ -44,5 +44,13 @@ export default class todosController{
     removeTask(id){
         todosService.removeTask(id)
     }
+
+    total(){
+        todosService.total()
+    }
+
+    remaining(){
+        todosService.remaining()
+    }
 }
 

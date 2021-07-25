@@ -30,6 +30,16 @@ class TodosService{
         await sandbox.delete(`veronica/todos/${id}`, toDelete)
         this.getAllTodos()
     }
+
+    total(){
+        let total = ProxyState.todos.length
+        return total
+    }
+    
+    remaining(){
+        let remaining = ProxyState.todos.filter(c.checked == false)
+        return remaining
+    }
 }
 
 export const todosService = new TodosService()

@@ -26,7 +26,10 @@
                     <div class="card-header">
                         <h5 class="card-title mb-0">To Do:</h5>
                     </div>
-                    <div class="card-body" id="todo"></div>
+                    <div class = "ml-3">
+                        <p><em>Remaining Tasks: this.checked = false / total</em></p>
+                    </div>
+                    <div id="todo"></div>
                     <form class="form d-flex p-2" onsubmit="app.todosController.createTodo(event)">
                         <input type="text" name = "description" class="form-control" placeholder="Add Task..."
                             required minlength="3" maxlength="50">

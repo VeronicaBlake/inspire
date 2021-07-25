@@ -1,4 +1,5 @@
 import Todo from "./Models/Todo.js"
+import Image from "./Models/Image.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 

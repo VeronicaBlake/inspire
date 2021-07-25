@@ -1,8 +1,10 @@
+
 export default class Todo {
-    constructor({ completed, description, id = generateId()}){
+    constructor({ completed, description, id = generateId(), value = 1}){
         this.completed = completed || false, 
         this.description = description
         this.id = id
+        this.value = value
     }
 
     get Template(){
