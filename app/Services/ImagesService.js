@@ -8,7 +8,6 @@ class ImagesService{
     }
     async getImage(){
         let res = await sandbox.get('/images')
-        console.log(res.data)
         ProxyState.images = new Image(res.data);
     }
 }
