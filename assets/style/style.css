@@ -1,1 +1,4 @@
-/* BASIC STYLES HERE */
+#myDiv {
+  background: no-repeat center center fixed;
+  background-size: cover;
+}

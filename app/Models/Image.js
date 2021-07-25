@@ -1,5 +1,5 @@
 export default class Image {
-    constructor({largeImgUrl}){
-        this.image = largeImgUrl
+    constructor({largeImgUrl,}){
+        this.image = largeImgUrl 
     }
 }

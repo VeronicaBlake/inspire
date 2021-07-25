@@ -2,13 +2,13 @@ import { ProxyState } from "../AppState.js";
 import { imagesService } from "../Services/ImagesService.js";
 
 function _draw(){
-    document.body.style.backgroundImage = `url(${ProxyState.images})`
-    console.log('draw ' + ProxyState.images)
+    document.getElementById("myDiv").style.backgroundImage = `url(${ProxyState.images.image})`
+    console.log('draw ' + ProxyState.image)
 }
 
 export default class ImagesController{
     constructor(){
-        ProxyState.on('images', _draw());
+        ProxyState.on('images', _draw);
         this.getImage()
     }
 
