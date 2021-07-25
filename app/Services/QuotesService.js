@@ -1,14 +1,12 @@
-import { ProxyState } from "../AppState.js"
-import  Quote   from "../Models/Quote.js"
-import { sandbox } from './AxiosService.js'
+import { ProxyState } from "../AppState.js";
+import Quote from "../Models/Quote.js"
+import { sandbox } from "./AxiosService.js"
 
-class QuotesService{
-    constructor(){
-        this.getAllQuotes()
-    }
-    async getAllQuotes(){
-        let res = await sandbox.get('/quotes')
-        ProxyState.quotes = new Quote(res.data);
+
+class QuotesService {
+    async getQuote() {
+        let res = await sandbox.get('/quotes');
+        ProxyState.quotes = new Quote(res.data)
     }
 }
 
