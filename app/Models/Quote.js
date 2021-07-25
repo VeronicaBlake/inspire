@@ -1,9 +1,16 @@
 export default class Quote {
-    constructor({ }){
-        //we refer to it as img, and it's sprites in the API
-        
+    constructor({author, content}){
+        this.author = author
+        this.content = content 
     }
 
+    get Template(){
+        return `
+        <h1>"${this.content}"</h1>
+        <h5><em>"- ${this.author}"</em></h5>
+        `
+         
+    }
 
 }
 

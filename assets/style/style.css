@@ -2,3 +2,7 @@
   background: no-repeat center center fixed;
   background-size: cover;
 }
+
+.d-hide:hover {
+  color: white;
+}
