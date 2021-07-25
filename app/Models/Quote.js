@@ -15,21 +15,4 @@ export default class Quote {
           </span>
         `
     }
-
 }
-
-
-// "quote": {
-//     "quote": {
-//       "body": {
-        
-//       },
-//       "author": {
-        
-//       },
-//       "tags": [
-//         {
-          
-//         }
-//       ]
-//     }
