@@ -1,23 +1,15 @@
 
-
 function _draw() {
-    document.getElementById("clock").innerHTML = time
-}
-
-export default class clocksController{
-    constructor(){
-        _draw();
-        this.clock()
-    }
-    
-    startTime() {
   const today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
-  setTimeout(startTime, 1000);
-}
+  document.getElementById('clock').innerText =  h + ":" + m + ":" + s;
+} 
+
+export default class ClocksController{
+    constructor(){
+        setInterval(_draw, 1000)
+    }
+
 }

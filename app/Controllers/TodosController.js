@@ -5,8 +5,11 @@ import { todosService } from "../Services/TodosService.js";
 function _drawAll(){
     const todos = ProxyState.todos
     let template = ''
+    let remaining = todos.filter(t => t.completed)
     todos.forEach(t => template += t.Template)
     document.getElementById('todo').innerHTML = template
+    let countTemplate = `${remaining.length}/${todos.length}`
+    document.getElementById('countTemplate').innerHTML = countTemplate
 }
 
 export default class todosController{
