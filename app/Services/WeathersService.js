@@ -9,6 +9,21 @@ class WeathersService {
         console.log(res.data)
         ProxyState.weathers = new Weather(res.data)
     }
+
+    toggle(){
+        var f = document.getElementById('f');
+        var c = document.getElementById('c')
+        if (f.style.display === "none") {
+            f.style.display = "block";
+        } else {
+            f.style.display = "none";
+        }
+        if (c.style.display === "block"){
+            c.style.display = "none";
+        } else {
+            c.style.display = "block"
+        }
+    }
 }
 
 export const weathersService = new WeathersService()

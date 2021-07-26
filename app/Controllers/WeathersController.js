@@ -17,4 +17,12 @@ export default class WeathersController {
             console.error(error)
         }
     }
+
+    async toggle(){
+        try {
+            weathersService.toggle()
+        } catch (error) {
+            console.error(error)
+        }
+    }
 }
