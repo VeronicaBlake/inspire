@@ -1,7 +1,7 @@
 
 
 function _draw() {
-    document.getElementById("clock").innerText = time
+    document.getElementById("clock").innerHTML = time
 }
 
 export default class clocksController{
