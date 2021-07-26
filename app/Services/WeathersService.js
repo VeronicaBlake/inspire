@@ -24,6 +24,7 @@ class WeathersService {
             c.style.display = "block"
         }
     }
+    //REVIEW this function can be cleaned up. if we send through a variable onclick will that work?
 }
 
 export const weathersService = new WeathersService()
